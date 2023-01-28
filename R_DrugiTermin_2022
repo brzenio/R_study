@@ -1,0 +1,43 @@
+Znalazłem drugi termin z R studio, @Natalia@Konrad zerknijcie :D
+
+Prosze zmienic nazwe niniejszego plik wg formatu "imie_nazwisko.R".
+# Prosze nie tworzyc zadnych projektow w RStudio.
+# Plik prosze umiescic na pulpicie w prawym gornym rogu.
+# Po skonczonej pracy odchodza Panstwo po prostu od komputera.
+# !!!!Prosze nie wylaczac komputera!!!!!
+# !!!!Pliki w innym formacie lub miejscu nie beda przyjmowane!!!!!
+#
+# Zadanie 1:
+# 0) W zadaniu prosze wykorzystac nastepujacy wektor:
+# c("Data: 01/25/2022, 12:10:44, kod pocztowy: 02-787, ulica: 'Zamiany', Pracownik: Jan Kowalski",
+# "Data: 01/26/2022, 14:10:44, kod pocztowy: 02-776, ulica: 'Nowoursynowska', Pracownik: Kowalewska Aneta",
+# "Data: 01/27/2022, 15:10:44, kod pocztowy: 02 759, ulica: 'Arbuzowa', Pracownik: Rafal Kowalczyk")
+# a) Zastap caly kod pocztowy wielka litera X.
+# b) Zastap nazwe ulicy wyrazeniem RODO.
+# c) Znajd elementy wektora, w ktorych nazwisko zawiera "Kow" oraz nazwisko nie jest koncem tekstu.
+# d) Przetworz zawarta w wektozre date na obiekt typu czas.
+
+
+
+#
+# Zadanie 2:
+# a) Wczytaj dwa pliki z kolumnowe "Zadanie_2a.txt" oraz "Zadanie_2b.txt".
+# b) Dokonaj zlaczenia tabel z pkt a) poprzez klucze podstawowe "klucz" oraz "key".
+# Tabela wynikowa powinna zawierac wszystkie wiersze z obydwu plikow (suma zbiorow).
+# c) Posortuj tabele wynikowa z pkt b) wzgledem klucza podstawowego malejaco.
+# d) Nie wykorzystujac petli, zastap braki danych w tabeli z pkt c) liczba 666.
+
+# Zadanie 3:
+# a) Stworz wektor liczb od 1 do 1003 dodajac do niego wartosci losowe z rozkladu normalnego o sredniej 100 oraz o odchyleniu standardowym 10.
+# b) Podziel powyzszy szereg na 6 rownych odcinkow.
+# c) Stworz za pomoca petli for iterujacej w ramach wektora z pkt b) 6 wykresow liniowy stworzonych w jednym okienku podzielonym na 6 obszarow.
+# d) Kazdy wykres stworzony jest na podstawie odcinkow z pkt b) oraz pkt a).
+# e) Tytul wykresu powinien zmieniac sie dynamicznie od "Wykres_1" do "Wykres_6". Nazwa osi pionowej to "Szereg".
+
+#
+# Zadania 4:
+# a) Stworz 5-elementowa lista. Kazdy z wektorow zawiera 10 wartosci wylosowanych z rozkladu rownomiernego (nie uzywajac petli).
+# b) Przeksztalc liste z pkt a) na macierz o wymiarach "10x5", poprzez polaczenie kazdego wektora kolumnowo.
+# c) Nie uzywajac petli, przetestuj wszystkie wartosci w tabeli z pkt. b) sprawdzajac czy sa one mniejsze lub rowne 0.5,
+# jezeli tak, to nowa wartosc wskazuje "mniej0.5", w przeciwnym wypadku "wiecej0.5".
+# d) Na podstawie wyniku z pkt c) nie wykorzystujac petli zlicz liczbe wystapien dwoch kategorii.
