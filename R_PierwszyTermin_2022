@@ -1,0 +1,54 @@
+Znalazłem i pierwszy termin z R. Ten był CHYBA prostszy
+
+
+# Zadanie_1
+#A)swórz wektor x zawierający znaki odpowiadające liczbą od 1 do 128
+#B)swtórz wektor zawierający następujące elementy :"Kasia", "MaĹ‚gosia", "ElĹĽbieta", "joasia", "acccb", "ab 100"
+#C) wyświetl wszystkie znaki z wektora x które odpowiadają cyfrą lub literą dużym / małym
+#d) jak wyżej odpowiadające znaką specjalnym
+#e) jak wyżej nie odpowiadające cyfrą
+#f) stwórz wyrażenie regularne które spowoduje wybranie tylko imion Kasia i joasia
+#g) stwórz wyrażenie regularne które spowoduje wybranie elementów "ab 100" lub "accccb"
+# Zadanie 2
+
+#a)wysymuluj 50 liczb całkowitych z przediału od 1 do 20 do wektóra " wektor_2 ",
+#początkowa wartość generatora liczb pseudolosowych powinna zostać ustalona na 123.
+#b)zaimportuj plik "zadanie_2" do obiektu "nazwa" kolumny powinny być zaimportowane jako tekst
+#c)nadaj nazwy kolejnym elementom wektora "wektor_2" na podstawie wektora "nazwa".
+#d)wyznacz sumy elementów należących do każdej grupy (zakresu), nie wykorzystując pętli
+#e)wyznacz liczbę elementów należących do każdej grupy (zakresu), nie wykorzystując pętli
+# Zadanie 3
+#A) stwórz funkcje (bez pętli) przyjmującą jako argument wejściowy obiekt x
+  #a)nadająca nazwy kolumn lub elementom, począwszy od x_1 do x_n 
+  #b) wyznacz sume elementów w każdej kolumnie lub sume elementów wektora
+  #c) zwraca obiekt wejściowy oraz obiekt stworzony w punkcie b).
+#B) przetestuj działanie funkcji dla
+ #b) wektorem o długości 100 o nazwie wektor (ziarno = 666) wypełnionych wartościami losowymi z rozkładu rownomiernego
+#a)macierzy rozmiaru 20x20 o nazwie macierz (ziarno = 666)wypełnionych wartościami losowymi z rozkładu rownomiernego
+# Zadanie 4 (potrzebujÄ™ pliku Zadanie_4)
+#A) zaimportuj plik "zadanie_4" do obiektu "obiekt_4"
+#B) Dodaj do obiektu nową kolumne "nowa" poprzez przetestowanie czy liczba w kolumnie "losowe"
+#jest mniejsza od 0,8,jeśli tak do nowa kolumna przyjmuje wartośc "mało" w przeciwnym "duzo"
+#C) stwórz listyę "lista_4" poprzez podział obiektu "obiekt_4" ze względu na kolumne "nowa"
+#D) Wykorzystując zwektorowana funkcje przejdz do każdego elementu listy i wyznacz do wszystkich
+#mozliwych kolumn sume elementów należących do grupy wyznaczonej przez kolumne "przemienne"
+#-------------------------------------------------------------------------------------------------
+# Wersja druga
+#zadanie 1 to to samo co 3 z pierwszej wersji
+# Zadanie 2
+#A) stwórz wektor koleejnych liczb od 1 do 100.
+#B) Stworz macierz o wymiarze 50x10 Nazwij kolumny macierzy w następujący sposób : piersza = Y a każda następna od x_1 do x_n
+#c) Do kolumny pierwszej wstaw podzbiór elementów wektora z pkt a z indeksów od 21 do 70
+#za pomocą pętli wstaw do kolejnych kolumn i wierszy opóźnienia wektora z pkt. a, tak że x_1 jest opóźnione o jeden okres 
+#a x_1 o 10 okresów.
+# Zadanie 3
+#a)Wysymuluj 30 liczb całkowitych z przedziału od 10 do 20 (ziarno = 444)
+#b) stwórz następnie poprzez prealokacje wektor liczb całkowitych o wartościach domyślinych o długości
+#wektora wyżej
+#c) za pomocą pętli for wstaw następnie elementy wektora losowaego z pkt a do wektora z pkt b
+
+# Zadanie 4
+#a) stwórz listę od długości 5 i wartościach domyślnych
+#b) stworz wektor poprzez wylosowanie licz od 1 do 10 5 razy bez powtórek (ziarno= 123)
+#c) wykorzystując funkcje bez pętli wstaw do kolejnych elementów listy wektor powtarzający konkrętną liczbę 
+#z wektora tyle razy jaka liczba jest zawarta w danym indeksie.
