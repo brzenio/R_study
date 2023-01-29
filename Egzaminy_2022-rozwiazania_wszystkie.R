@@ -306,3 +306,143 @@ macierz[macierz > 0.5] <- "wiecej0.5"
 tablica_wystapien <- table(macierz)
 
 tablica_wystapien
+   
+               
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#  DRUGI TERMIN
+# __________________________________________________________________________________________________________________________________________________________
+#
+#
+#
+#
+#
+#
+#
+#
+#          
+         
+               
+ """
+Zadanie 1:
+
+  a) Stworz funkcje (nie wykorzystujac petli) przyjmujaca jako argument wejsciowy obiekt "x" oraz:
+
+  - nadajaca nazwy kolumnom (dla tablic) lub elementom (dla wektorow), poczawszy od "x_1" az do "x_n"
+       ("n" jest liczba kolumn lub dlugoscia wektora).
+
+  - wyznaczacjaca sume elementow w kazdej kolumnie (dla tablic) lub sume elementow wektora.
+
+    - zwracajaca obiekt wejsciowy oraz obiekt stworzony w punkcie z podpunktu powyzej.
+
+b) Przetestuj dzialenie funkcji dla:
+  - macierzy rozmiaru "20x20" (ziarno = 666).
+  - wektora dlugosci "100" (ziarno = 666).
+     wypelnionych wartosciami losowymi z rozkladu rownomiernego.
+"""
+
+# Do przetestowania ten kod
+# get_info <- function(x) {
+#   names(x) <- paste0("x_", seq_along(x))
+#   sum_x <- sum(x)
+#   list(input = x, summary = c(sum_of_elements = sum_x))
+# }
+
+name_and_sum <- function(x) {
+  n <- if (is.matrix(x)) ncol(x) else length(x)
+  names(x) <- paste0("x_", 1:n)
+  sums <- if (is.matrix(x)) colSums(x) else sum(x)
+  list(x = x, sums = sums)
+}
+
+
+set.seed(666)
+mat <- matrix(runif(400), ncol = 20)
+result_mat <- name_and_sum(mat)
+
+set.seed(666)
+vec <- runif(100)
+result_vec <- name_and_sum(vec)
+
+result_mat
+result_vec
+
+"""Zadanie 2:
+
+  a) Stworz wektor zawierajacy liczby od 1 do 9.
+
+  b) Stworz dwie listy o dlugosci odpowiadajacej dlugosci wektora z pkt. a.
+
+  c) Nadaj obu listom nazwy elementow od "l1" do "l9". Uzyj operacji zwektoryzowanych tworzacych powyzsze nazwy.
+
+  d) Za pomoca petli while iterujacej w ramch wartosci zawartych w wektorze z pkt. a, wstaw w kolejne elementy pierwszej listy podzbiór wektora z pkt a, tak aby pierwszy element listy zawieral pierwszy element, drugi element listy zawieral pierwszy oraz drugi element,..., dziewiaty element listy zawieral wszystkie elementy. Stworzy sie swojego rodzaju piramida.
+  
+  e) W trakcie dzialania petli z pkt. c. usun dany (i-ty) element drugiej listy. W kazdym kroku druga lista powninna byc coraz mniejsza.
+"""
+
+vec <- 1:9
+
+list1 <- vector("list", length(vec))
+list2 <- vector("list", length(vec))
+
+names(list1) <- paste0("l", vec)
+names(list2) <- paste0("l", vec)
+
+i <- 1
+while (i <= length(vec)) {
+  list1[[i]] <- vec[1:i]
+  i <- i + 1
+}
+
+i <- 1
+while (i <= length(vec)) {
+  list1[[i]] <- vec[1:i]
+  list2[[i]] <- NULL
+  i <- i + 1
+}
+
+"""Zadanie 3:
+
+  a) Wczytaj dwa pliki kolumnowe "Zadanie_3a.txt" oraz "Zadanie_3b.txt".
+
+  b) Dokonaj zlaczenia tabel z pkt a) poprzez klucze podstawowe "klucz" oraz "key".
+     Tabela wynikowa powinna zawierac wszystkie wiersze z obydwu plikow (suma zbiorow).
+
+  c) Posortuj tabele wynikowa z pkt b) wzgledem klucza podstawowego malejaco.
+
+  d) Nie wykorzystujac petli, zastap braki danych w tabeli z pkt c) liczba 666.
+"""
+
+data_a <- read.table("Zadanie_3a.txt", header = TRUE)
+data_b <- read.table("Zadanie_3b.txt", header = TRUE)
+
+merged_data <- merge(data_a, data_b, by.x = "klucz", by.y = "key", all = TRUE)
+
+sorted_data[is.na(sorted_data)] <- 666
+
+"""Zadanie 4:
+
+a) Napisz program, ktory znajdzie indeks wierszy i kolumn o wartości maksymalnej i minimalnej w danej macierzy.
+
+b) Przetestuj dzialanie programu na dowolnej macierzy.
+"""
+
+findMinMaxIndices <- function(mat) {
+  max_index <- which(mat == max(mat), arr.ind = TRUE)
+  min_index <- which(mat == min(mat), arr.ind = TRUE)
+  list(max_index = max_index, min_index = min_index)
+}
+
+# Example usage:
+mat <- matrix(1:9, ncol = 3)
+mat
+result <- findMinMaxIndices(mat)
+print(result$max_index) # Output: [1,3] (row, column indices of max value)
+print(result$min_index) # Output: [3,1] (row, column indices of min value)
